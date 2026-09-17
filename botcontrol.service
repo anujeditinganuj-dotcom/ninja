@@ -1,0 +1,17 @@
+[Unit]
+Description=BotControl Manager - Telegram Multi-Bot Management System
+After=network.target mongod.service
+
+[Service]
+Type=simple
+User=botcontrol
+WorkingDirectory=/opt/botcontrol
+EnvironmentFile=/opt/botcontrol/.env
+ExecStart=/opt/botcontrol/venv/bin/python3 main.py
+Restart=on-failure
+RestartSec=5
+StandardOutput=append:/var/log/botcontrol/botcontrol.log
+StandardError=append:/var/log/botcontrol/botcontrol.log
+
+[Install]
+WantedBy=multi-user.target

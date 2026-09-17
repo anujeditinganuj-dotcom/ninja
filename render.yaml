@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: botcontrol-manager
+    env: docker
+    plan: starter
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    autoDeploy: true
+    envVars:
+      - key: API_ID
+        sync: false
+      - key: API_HASH
+        sync: false
+      - key: BOT_TOKEN
+        sync: false
+      - key: OWNER_ID
+        sync: false
+      - key: MONGO_URI
+        sync: false
+      - key: DATABASE_NAME
+        value: botcontrol
+      - key: ENCRYPTION_KEY
+        sync: false
+      - key: MAINTENANCE_REMINDER_HOURS
+        value: "6"
+      - key: KEEPALIVE_INTERVAL
+        value: "600"
+    # PORT is injected automatically by Render for every Web Service —
+    # do NOT set it here. config.py reads it via os.getenv("PORT", ...)
+    # and the aiohttp health server binds to it on 0.0.0.0.
