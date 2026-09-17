@@ -11,5 +11,5 @@ OWNER_ID = int(os.environ.get("OWNER_ID", "8931907813"))
 
 DATABASE_NAME = os.environ.get("DATABASE_NAME", "botcontrol")
 PORT = int(os.environ.get("PORT", "8080"))
-ENCRYPTION_KEY = os.environ.get("ENCRYPTION_KEY", "e7109544dab612bd5b80b8a427ac474ba5541b9efff7a4ca1c8ef85df2489c23")
+ENCRYPTION_KEY = os.environ.get("ENCRYPTION_KEY", "km9Q19FzoqTQjaVnCziEvGPkcLuZJK__FE3uiLb4x84=")
 MAINTENANCE_REMINDER_HOURS = float(os.environ.get("MAINTENANCE_REMINDER_HOURS", "24"))
