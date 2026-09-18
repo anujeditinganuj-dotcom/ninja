@@ -13,3 +13,8 @@ DATABASE_NAME = os.environ.get("DATABASE_NAME", "botcontrol")
 PORT = int(os.environ.get("PORT", "8080"))
 ENCRYPTION_KEY = os.environ.get("ENCRYPTION_KEY", "km9Q19FzoqTQjaVnCziEvGPkcLuZJK__FE3uiLb4x84=")
 MAINTENANCE_REMINDER_HOURS = float(os.environ.get("MAINTENANCE_REMINDER_HOURS", "24"))
+
+# Optional: channel id (e.g. -100xxxxxxxxxx) where bot connect/disconnect,
+# reconnect, and new-user events across every managed bot are posted. The
+# master bot must be an admin of this channel. Leave unset/empty to disable.
+LOG_CHANNEL_ID = int(os.environ.get("LOG_CHANNEL_ID", "-1003925649805")) or None
